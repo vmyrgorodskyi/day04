@@ -62,14 +62,14 @@ print(names[who_pays_numer])
 
 '''
 
-#lesson34
+#lesson43
 
 #fruits
 #dirty_dozen = ["Strawberries", "Spinach", "Kale", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears", "Tomatoes", "Celery", "Potatoes"]
 
-#lesson35
+#lesson44
 
-
+'''
 # 🚨 Don't change the code below 👇
 row1 = ["⬜️","⬜️","⬜️"]
 row2 = ["⬜️","⬜️","⬜️"]
@@ -87,13 +87,71 @@ selected_row = map[vertical - 1]
 selected_row[horizontal - 1] = "X"
 
 
-#print(map[vertical - 1])
-
-
-
-
 
 #Write your code above this row 👆
 
 # 🚨 Don't change the code below 👇
 print(f"{row1}\n{row2}\n{row3}")
+'''
+'''
+fruits = ["Strawberries", "Nectarines", "Apples", "Grapes", "Peaches", "Cherries", "Pears"]
+vegetables = ["Spinach", "Kale", "Tomatoes", "Celery", "Potatoes"]
+
+dirty_dozen = [fruits, vegetables]
+
+print(dirty_dozen)
+
+
+print(dirty_dozen[1][2])
+print(dirty_dozen[1][3])
+'''
+
+#lesson 45
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+import random
+
+player_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors "))
+computer_choice = random.randint(0, 2)
+
+if player_choice != computer_choice:
+    if player_choice == 0 and computer_choice == 1:
+        print(f"Player chose {rock} \n Computer chose {paper} \n Computer won")
+    elif player_choice == 0 and computer_choice == 2:
+        print(f"Player chose {rock} \n Computer chose {scissors} \n You won")
+    elif player_choice == 1 and computer_choice == 0:
+        print(f"Player chose {paper} \n Computer chose {rock} \n You won")
+    elif player_choice == 1 and computer_choice == 2:
+        print(f"Player chose {paper} \n Computer chose {scissors} \n Computer won")
+    elif player_choice == 2 and computer_choice == 0:
+        print(f"Player chose {scissors} \n Computer chose {rock} \n computer won")
+    else:
+        print(f"Player chose {scissors} \n Computer chose {paper} \n You won")
+else:
+    print("Draw")
